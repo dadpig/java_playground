@@ -1,0 +1,11 @@
+class :
+  name : Person
+  package : com.test
+  attributes:
+    - name : String
+    - age=50  : Integer
+  methods:
+    - toString:
+        parameters: none
+        return: String
+        implementation: return "Person.toString() -> It works!";
