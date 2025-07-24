@@ -1,0 +1,31 @@
+
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+
+public class PatternDataStructure {
+
+    final Map<String,String> countries = new HashMap<>();
+
+    public PatternDataStructure(){
+        countries.put("Brazil","Portuguese");
+        countries.put("Argentina","Spanish");
+        countries.put("Guiana","French");
+    }
+
+    public String getLanguage(String source){
+      
+        return countries.getOrDefault(source, "Language not found");
+    }
+
+    public static void main(String[] args) {
+        PatternDataStructure ap = new PatternDataStructure();
+        System.out.println(ap.getLanguage("Brazil"));
+        System.out.println(ap.getLanguage("Argentina"));
+        System.out.println(ap.getLanguage("Guiana"));
+        System.out.println(ap.getLanguage("not"));
+        System.out.println(ap.getLanguage(null));
+    }
+
+}
